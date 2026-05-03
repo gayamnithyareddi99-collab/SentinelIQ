@@ -757,31 +757,48 @@ footer{background:#040C18;border-top:1px solid rgba(56,182,232,0.1);padding:60px
       </div>
 
       <!-- Scoring model callout -->
-      <div style="margin-top:50px;background:rgba(56,182,232,0.05);border:1px solid rgba(56,182,232,0.2);border-radius:12px;padding:36px;">
+      <style>
+        .ip-section{margin-top:50px;background:rgba(56,182,232,0.05);border:1px solid rgba(56,182,232,0.2);border-radius:12px;padding:clamp(20px,5vw,36px);}
+        .ip-title{font-family:var(--serif);color:var(--gold);font-size:clamp(18px,4vw,24px);margin-bottom:16px;line-height:1.3;}
+        .ip-para{color:#9AADCA;line-height:1.85;margin-bottom:20px;font-size:clamp(13px,2.5vw,15px);}
+        .ip-elements{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:24px;}
+        .ip-el{background:rgba(56,182,232,0.08);border:1px solid rgba(56,182,232,0.2);padding:14px;border-radius:8px;text-align:center;}
+        .ip-el-label{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+        .ip-el-text{color:var(--white);font-size:12px;margin-top:6px;line-height:1.4;}
+        @media(max-width:700px){
+          .ip-elements{grid-template-columns:repeat(2,1fr);}
+          .ip-el:last-child{grid-column:1 / -1;}
+        }
+        @media(max-width:400px){
+          .ip-elements{grid-template-columns:1fr;}
+          .ip-el:last-child{grid-column:auto;}
+        }
+      </style>
+      <div class="ip-section">
         <div class="section-label">Proprietary IP</div>
-        <h3 style="font-family:var(--serif);color:var(--gold);font-size:24px;margin-bottom:16px;">The Governance Health Scoring Algorithm</h3>
-        <p style="color:#9AADCA;line-height:1.85;margin-bottom:20px;">SentinelIQ's composite scoring engine is a proprietary multi-variable weighting model. Inputs  policy acknowledgement coverage, open supplier issue count, portfolio-average supplier reliability scores, response time to escalations, and recency weighting  are normalised to a 0–100 scale, weighted by configurable importance coefficients, and combined into a single Governance Health Score.</p>
-        <p style="color:#9AADCA;line-height:1.85;margin-bottom:20px;">An independent prior art search across international patent databases using Patseer confirmed that no existing patent disclosure  individually or in combination  covers the five key novel elements of the SentinelIQ framework. A formal UK patent application is actively in preparation with the IPO.</p>
-        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:24px;">
-          <div style="background:rgba(56,182,232,0.08);border:1px solid rgba(56,182,232,0.2);padding:14px;border-radius:8px;text-align:center;">
-            <div style="font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;">Element A</div>
-            <div style="color:var(--white);font-size:12px;margin-top:6px;line-height:1.4;">Unified SME Governance Layer</div>
+        <h3 class="ip-title">The Governance Health Scoring Algorithm</h3>
+        <p class="ip-para">SentinelIQ's composite scoring engine is a proprietary multi-variable weighting model. Inputs — policy acknowledgement coverage, open supplier issue count, portfolio-average supplier reliability scores, response time to escalations, and recency weighting — are normalised to a 0–100 scale, weighted by configurable importance coefficients, and combined into a single Governance Health Score.</p>
+        <p class="ip-para">An independent prior art search across international patent databases using Patseer confirmed that no existing patent disclosure — individually or in combination — covers the five key novel elements of the SentinelIQ framework. A formal UK patent application is actively in preparation with the IPO.</p>
+        <div class="ip-elements">
+          <div class="ip-el">
+            <div class="ip-el-label">Element A</div>
+            <div class="ip-el-text">Unified SME Governance Layer</div>
           </div>
-          <div style="background:rgba(56,182,232,0.08);border:1px solid rgba(56,182,232,0.2);padding:14px;border-radius:8px;text-align:center;">
-            <div style="font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;">Element B</div>
-            <div style="color:var(--white);font-size:12px;margin-top:6px;line-height:1.4;">Composite Health Score</div>
+          <div class="ip-el">
+            <div class="ip-el-label">Element B</div>
+            <div class="ip-el-text">Composite Health Score</div>
           </div>
-          <div style="background:rgba(56,182,232,0.08);border:1px solid rgba(56,182,232,0.2);padding:14px;border-radius:8px;text-align:center;">
-            <div style="font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;">Element C</div>
-            <div style="color:var(--white);font-size:12px;margin-top:6px;line-height:1.4;">Policy Accountability Engine</div>
+          <div class="ip-el">
+            <div class="ip-el-label">Element C</div>
+            <div class="ip-el-text">Policy Accountability Engine</div>
           </div>
-          <div style="background:rgba(56,182,232,0.08);border:1px solid rgba(56,182,232,0.2);padding:14px;border-radius:8px;text-align:center;">
-            <div style="font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;">Element D</div>
-            <div style="color:var(--white);font-size:12px;margin-top:6px;line-height:1.4;">Supplier Reliability Engine</div>
+          <div class="ip-el">
+            <div class="ip-el-label">Element D</div>
+            <div class="ip-el-text">Supplier Reliability Engine</div>
           </div>
-          <div style="background:rgba(56,182,232,0.08);border:1px solid rgba(56,182,232,0.2);padding:14px;border-radius:8px;text-align:center;">
-            <div style="font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;">Element E</div>
-            <div style="color:var(--white);font-size:12px;margin-top:6px;line-height:1.4;">Execution-Focused SME Design</div>
+          <div class="ip-el">
+            <div class="ip-el-label">Element E</div>
+            <div class="ip-el-text">Execution-Focused SME Design</div>
           </div>
         </div>
       </div>
